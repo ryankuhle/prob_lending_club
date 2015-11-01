@@ -20,3 +20,8 @@ graph = stats.probplot(loansData['Amount.Requested'], dist="norm", plot=plt)
 plt.savefig('qq.png')
 
 #compare results with Amount.Funded.By.Investors
+'''
+from the box plot until that the investors funded a little less than was requested. There were a lot of outliers at the top of the field
+from the histogram you can tell that the most popular investment value  was in the 10,000 range
+the qq charts were very similar
+'''
