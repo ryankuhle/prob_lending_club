@@ -6,6 +6,17 @@ import scipy.stats as stats
 loansData = pd.read_csv('https://spark-public.s3.amazonaws.com/dataanalysis/loansData.csv')
 loansData.dropna(inplace=True)
 
-#Load to pandas
-#Create box plot, histogram, QQ for column Amount.Requested
+#Create boxplot
+loansData.boxplot(column='Amount.Requested')
+plt.savefig('boxplot.png')
+
+#Create histogram
+loansData.hist(column='Amount.Requested')
+plt.savefig('histogram.png')
+
+#Create QQ
+plt.figure()
+graph = stats.probplot(loansData['Amount.Requested'], dist="norm", plot=plt)
+plt.savefig('qq.png')
+
 #compare results with Amount.Funded.By.Investors
