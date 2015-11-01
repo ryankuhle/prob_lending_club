@@ -1,4 +1,6 @@
-
+import matplotlib.pyplot as plt
+import pandas as pd
+import scipy.stats as stats
 
 
 #Read in data
